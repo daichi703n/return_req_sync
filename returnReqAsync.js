@@ -1,17 +1,20 @@
-console.log("Return Request Async");
-
 var request = require('request');
+var returnCode;
 
-//オプションを定義
-var options = {
-  url: 'https://hoge.com/api/v2/fuga',
-  method: 'GET',
+console.log("Start  Return Request Async");
+returnCode = httpGet();
+console.log("Status Code (main)     : "+returnCode)
+console.log("End    Return Request Async");
+
+function httpGet(){
+  var options = {
+    url: 'https://google.com/',
+    method: 'GET',
+    }
+  request(options, function (error, response, body) {
+    if (!error && response.statusCode == 200) {
+      console.log("Status Code (function) : "+response.statusCode)
+      return response.statusCode;
+    }
+  })
 }
-
-request(options, function (error, response, body) {
-if (!error && response.statusCode == 200) {
-    console.log(body) // Show the HTML for the Google homepage. 
-  }
-})
-
-
