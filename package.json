@@ -1,13 +1,15 @@
 {
-  "name": "chat-example",
+  "name": "return-req-sync",
   "version": "0.0.0",
-  "description": "A chat example to showcase how to use `socket.io` with a static `express` server with `async` for control flow.",
-  "main": "server.js",
-  "repository": "",
-  "author": "Mostafa Eweda <mo.eweda@gmail.com>",
+  "private": true,
+  "description": "Sync request with then-request in node.js.",
+  "main": "returnReqSync.js",
+  "repository": "https://github.com/daichi703n/return_req_sync",
+  "author": "Daichi Kimura <daichi703n@gmail.com>",
   "dependencies": {
-    "async": "~0.2.8",
-    "express": "~3.2.4",
-    "socket.io": "~0.9.14"
+    "then-request": "~2.x.x",
+    "sync-request": "~3.x.x",
+    "request": "~2.79.0",
+    "util": "~0.x.x"
   }
 }
