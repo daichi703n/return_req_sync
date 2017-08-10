@@ -8,7 +8,7 @@
   "author": "Daichi Kimura <daichi703n@gmail.com>",
   "dependencies": {
     "then-request": "~2.x.x",
-    "sync-request": "~3.x.x",
+    "sync-request": "~4.x.x",
     "request": "~2.79.0",
     "util": "~0.x.x"
   }

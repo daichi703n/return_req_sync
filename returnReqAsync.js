@@ -1,20 +1,25 @@
 var request = require('request');
 var returnCode;
+var getUrl = 'https://google.com/';
 
 console.log("Start  Return Request Async");
-returnCode = httpGet();
+returnCode = httpGet(getUrl);
 console.log("Status Code (main)     : "+returnCode);
 console.log("End    Return Request Async");
 
-function httpGet(){
+function httpGet(url){
   var options = {
-    url: 'https://google.com/',
+    url: url,
     method: 'GET',
     };
   request(options, function (error, response, body) {
-    if (!error && response.statusCode == 200) {
+    if (!error) {
       console.log("Status Code (function) : "+response.statusCode);
       return response.statusCode;
+    }
+    else
+    {
+      console.log("Error!!");
     }
   });
 }
